@@ -62,8 +62,10 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <header
-	class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between transition-all {scrolledDistance <
-		400 && !openJumbotron || !isHome
+	class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between transition-all {(scrolledDistance <
+		400 &&
+		!openJumbotron) ||
+	!isHome
 		? ' text-white'
 		: ' text-black'} bg-black px-8 py-4 text-white"
 >
@@ -76,7 +78,7 @@
 			</li>
 			{#if openJumbotron}
 				<div transition:fade class="absolute top-18 left-0 h-auto w-full bg-black px-8 py-4 pb-16">
-					<div class="grid grid-cols-6 gap-4 lg:container">
+					<div class="grid grid-cols-2 gap-4 lg:container lg:grid-cols-6">
 						<div>
 							<h2 class="mb-4 text-lg underline">Orígenes</h2>
 							<ul>
@@ -119,9 +121,13 @@
 		</ul>
 	</div>
 	{#if scrolledDistance > 400 || openJumbotron || pathName != '/'}
-		<div transition:fade><img src="isotipo.png" class="w-8" alt="" /></div>
+		<div transition:fade><a href="/"><img src="isotipo.png" class="w-8" alt="" /></a></div>
 	{/if}
 	<div></div>
 </header>
 
 {@render children()}
+
+<footer class=" w-full bg-black py-32 text-center text-white">
+	<p>© 2026 Casa del Ron México</p>
+</footer>

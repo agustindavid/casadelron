@@ -89,6 +89,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Casa del Ron México</title>
+</svelte:head>
+
 <div class="hero-container relative h-[150vh] overflow-hidden">
 	<div class="hero-image absolute top-0 left-0 h-[150vh] w-full overflow-hidden">
 		<img
@@ -117,7 +121,7 @@
 	</div>
 </div>
 
-<section class="relative z-20 bg-white px-8 py-16">
+<section class="relative z-20 bg-white lg:px-8 px-4 py-16">
 	<div class="mx-auto lg:container">
 		<h2 class=" mb-8 text-4xl">De nuestra selección</h2>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -143,8 +147,12 @@
 	</div>
 </section>
 
-<div class="flex h-screen gap-16 bg-orange-50 pl-5 text-2xl text-black">
-	<div class="flex w-2/5 flex-col items-center justify-center">
+<div class="flex lg:h-screen flex-col gap-16 bg-orange-50 lg:pl-5 text-2xl text-black lg:flex-row">
+	<div class="lg:w-3/5 w-full lg:order-2">
+		<img src="qs.jpg" class="h-full aspect-square lg:aspect-auto object-cover" alt="" />
+	</div>
+
+	<div class="flex lg:w-2/5 w-full flex-col items-center pb-16 lg:pb-0 justify-center lg:order-1 px-4">
 		<h2 class="mb-8 w-full text-left text-4xl">El ron en México</h2>
 		<div class=" font-light">
 			<p>
@@ -161,38 +169,35 @@
 			</p>
 		</div>
 	</div>
-	<div class="w-3/5">
-		<img src="qs.jpg" class="h-full object-cover" alt="" />
-	</div>
 </div>
 
 <section class=" bg-[#112d1e] py-16 text-white">
-	<div class="mx-auto px-8">
+	<div class="mx-auto lg:px-8">
 		<h2 class="mb-8 text-4xl">Orígenes</h2>
 		<Map />
 	</div>
 </section>
 
-<div class="events-container relative h-screen overflow-hidden">
-	<div class="events-image absolute top-0 left-0 h-[150vh] w-full">
+<div class="events-container relative h-full lg:h-[150vh] overflow-hidden">
+	<div class="events-image absolute top-0 h-full left-0 lg:h-[150vh] w-full">
 		<img
 			src="https://www.saveur.com/uploads/2022/03/05/sugarcane-linda-xiao.jpg?format=auto&optimize=high&width=1440"
 			alt=""
-			class="h-full w-full object-cover object-center will-change-transform"
+			class="h-full w-full absolute object-cover object-center will-change-transform"
 		/>
 		<div class="absolute top-0 left-0 h-full w-full bg-black/0"></div>
 	</div>
 	<!-- Overlay that slides up -->
 	<div
-		class="events-overlay absolute top-0 left-0 z-10 flex
+		class="events-overlay relative lg:absolute top-0 left-0 z-10 flex
          w-full
          flex-col items-center justify-center py-16
            text-black will-change-transform"
 	>
-		<div class="grid w-full grid-cols-2 gap-16 lg:container">
+		<div class="grid w-full lg:grid-cols-2 gap-16 pt-16 lg:pt-0 lg:container">
 			{#each items as item, i}
 				<div
-					class="scroll-reveal card mx-auto aspect-square w-full max-w-sm bg-amber-50 px-4 py-4 pb-8 odd:translate-y-40"
+					class="scroll-reveal card mx-auto aspect-square w-full max-w-sm bg-amber-50 px-4 py-4 pb-8 lg:odd:translate-y-40"
 				>
 					<img
 						src="https://forbes.es/wp-content/uploads/2022/12/aaaFY21_SantaTeresa_1796_IT_PK2.jpg"
@@ -206,64 +211,6 @@
 		</div>
 	</div>
 </div>
-
-<section>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa
-	excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima
-	itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque
-	placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem
-	maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium
-	aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur
-	adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum
-	adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor
-	sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus
-	officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem
-	ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa
-	excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima
-	itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque
-	placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem
-	maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium
-	aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur
-	adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum
-	adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor
-	sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus
-	officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem
-	ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa
-	excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima
-	itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque
-	placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem
-	maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium
-	aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur
-	adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum
-	adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor
-	sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus
-	officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem
-	ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa
-	excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima
-	itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque
-	placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem
-	maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium
-	aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur
-	adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum
-	adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor
-	sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus
-	officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem
-	ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa
-	excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima
-	itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic atque
-	placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium aliquam rem
-	maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum adipisci? Quos accusantium
-	aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor sit amet, consectetur
-	adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus officiis eum
-	adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem! Lorem ipsum dolor
-	sit amet, consectetur adipisicing elit. Sit hic atque placeat harum iste ipsa excepturi temporibus
-	officiis eum adipisci? Quos accusantium aliquam rem maiores sunt minima itaque quaerat. Rem!
-</section>
 
 <style>
 	:global(.scroll-reveal) {

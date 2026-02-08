@@ -29,9 +29,9 @@
 	}
 </script>
 
-<div class="grid grid-cols-6 gap-16">
+<div class="grid grid-cols-1 lg:grid-cols-6 lg:gap-16">
 	<div class="col-span-1">
-		<ul class="state-list flex w-full flex-col">
+		<ul class="state-list flex pl-4 lg:pl-0 w-full mb-4 lg:mb-0 lg:flex-col whitespace-nowrap lg:whitespace-normal overflow-auto">
 			{#each states as state}
 				<li>
 					<button
@@ -44,7 +44,7 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="col-span-2 flex w-full flex-col gap-4">
+	<div class="col-span-2 flex w-full flex-col gap-4 px-4 lg:px-0">
 		{#key selectedState.id}
 			<div in:fly={{ x: -200, duration: 250 }} out:fade={{ duration: 0 }} onoutroend={scaleImage}>
 				<div class="text-left">
@@ -64,7 +64,7 @@
 			</div>
 		{/key}
 	</div>
-	<div class="col-span-3">
+	<div class="col-span-3 hidden lg:block">
 		<svg id="katman_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 900 600">
 			<path class="st0" d="M0,0" />
 			<path class="st1" d="M763.1,321.6l2.4,2.7-.4,2.4-1.8-1,1-1.7-1.2-2.4Z" />

@@ -3,7 +3,6 @@
 	import gsap from 'gsap';
 	import ScrollTrigger from 'gsap/ScrollTrigger';
 	import { lenisStore } from '$lib/lenisStore';
-	import Page from '../+page.svelte';
 
 	let unsubscribe;
 
@@ -59,6 +58,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Ron Potosi Melao</title>
+</svelte:head>
+
 <div class="hero-container relative h-[150vh] overflow-hidden">
 	<div class="hero-image absolute top-0 left-0 h-[150vh] w-full overflow-hidden">
 		<img
@@ -97,10 +100,10 @@
 			<div>
 				<img src="melao.jpg" class="w-full" alt="" />
 			</div>
-			<div class=" mt-32">
+			<div class=" lg:mt-32">
 				<img src="melao.jpg" class="w-full" alt="" />
 			</div>
-			<div class=" -translate-y-32">
+			<div class=" lg:-translate-y-32">
 				<img src="melao.jpg" class="w-full" alt="" />
 			</div>
 			<div>
@@ -165,11 +168,11 @@
 	<div class="py-16 text-center">
 		<h3 class="text-4xl">Ideal para:</h3>
 	</div>
-	<div class="grid h-screen grid-cols-2 items-center">
+	<div class="grid items-center lg:h-screen lg:grid-cols-2">
 		<div>
 			<img src="hover.jpg" class="scroll-reveal aspect-square w-full object-cover" alt="" />
 		</div>
-		<div class="scroll-reveal flex flex-col gap-4 p-16">
+		<div class="scroll-reveal flex flex-col gap-4 p-4 lg:p-16">
 			<h4 class="border-b border-white pb-4 text-3xl">Mojito</h4>
 			<div class="flex flex-col gap-4">
 				<h5 class="text-xl">Ingredientes.</h5>
@@ -193,11 +196,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid h-screen grid-cols-2 items-center">
-		<div class="order-1">
-			<img src="hover.jpg" class="aspect-square w-full object-cover scroll-reveal" alt="" />
+	<div class="grid items-center lg:h-screen lg:grid-cols-2">
+		<div class="lg:order-1">
+			<img src="hover.jpg" class="scroll-reveal aspect-square w-full object-cover" alt="" />
 		</div>
-		<div class="order-0 flex flex-col gap-4 p-16 scroll-reveal">
+		<div class="scroll-reveal order-0 flex flex-col gap-4 p-4 lg:p-16">
 			<h4 class="border-b border-white pb-4 text-3xl">Mojito</h4>
 			<div class="flex flex-col gap-4">
 				<h5 class="text-xl">Ingredientes.</h5>
@@ -221,11 +224,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid h-screen grid-cols-2 items-center">
+	<div class="grid items-center lg:h-screen lg:grid-cols-2">
 		<div>
-			<img src="hover.jpg" class="aspect-square w-full object-cover scroll-reveal" alt="" />
+			<img src="hover.jpg" class="scroll-reveal aspect-square w-full object-cover" alt="" />
 		</div>
-		<div class="flex flex-col gap-4 p-16 scroll-reveal">
+		<div class="scroll-reveal flex flex-col gap-4 p-4 lg:p-16">
 			<h4 class="border-b border-white pb-4 text-3xl">Mojito</h4>
 			<div class="flex flex-col gap-4">
 				<h5 class="text-xl">Ingredientes.</h5>

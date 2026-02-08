@@ -44,28 +44,7 @@
 			}
 		});
 
-		gsap.to('.events-image', {
-			yPercent: 30,
-			ease: 'none',
-			scrollTrigger: {
-				trigger: '.events-container',
-				start: '-5% top',
-				end: 'bottom top',
-				scrub: true
-			}
-		});
-
-		// Slide up effect for the overlay (faster scroll)
-		gsap.to('.events-overlay', {
-			yPercent: -50,
-			ease: 'power1.inOut',
-			scrollTrigger: {
-				trigger: '.events-container',
-				start: 'top top',
-				end: 'bottom top',
-				scrub: true
-			}
-		});
+	
 	});
 
 	function checkVisibility() {
@@ -178,39 +157,7 @@
 	</div>
 </section>
 
-<div class="events-container relative h-full lg:h-[150vh] overflow-hidden">
-	<div class="events-image absolute top-0 h-full left-0 lg:h-[150vh] w-full">
-		<img
-			src="https://www.saveur.com/uploads/2022/03/05/sugarcane-linda-xiao.jpg?format=auto&optimize=high&width=1440"
-			alt=""
-			class="h-full w-full absolute object-cover object-center will-change-transform"
-		/>
-		<div class="absolute top-0 left-0 h-full w-full bg-black/0"></div>
-	</div>
-	<!-- Overlay that slides up -->
-	<div
-		class="events-overlay relative lg:absolute top-0 left-0 z-10 flex
-         w-full
-         flex-col items-center justify-center py-16
-           text-black will-change-transform"
-	>
-		<div class="grid w-full lg:grid-cols-2 gap-16 px-4 lg:px-0 pt-16 lg:pt-0 lg:container">
-			{#each items as item, i}
-				<div
-					class="scroll-reveal card mx-auto aspect-square w-full max-w-sm bg-amber-50 px-4 py-4 pb-8 lg:odd:translate-y-40"
-				>
-					<img
-						src="https://forbes.es/wp-content/uploads/2022/12/aaaFY21_SantaTeresa_1796_IT_PK2.jpg"
-						alt=""
-						class="aspect-square w-full"
-					/>
-					<h3>{item.title}</h3>
-					<p>{item.text}</p>
-				</div>
-			{/each}
-		</div>
-	</div>
-</div>
+
 
 <style>
 	:global(.scroll-reveal) {

@@ -194,7 +194,7 @@
          flex-col items-center justify-center py-16
            text-black will-change-transform"
 	>
-		<div class="grid w-full lg:grid-cols-2 gap-16 pt-16 lg:pt-0 lg:container">
+		<div class="grid w-full lg:grid-cols-2 gap-16 px-4 lg:px-0 pt-16 lg:pt-0 lg:container">
 			{#each items as item, i}
 				<div
 					class="scroll-reveal card mx-auto aspect-square w-full max-w-sm bg-amber-50 px-4 py-4 pb-8 lg:odd:translate-y-40"
@@ -202,7 +202,7 @@
 					<img
 						src="https://forbes.es/wp-content/uploads/2022/12/aaaFY21_SantaTeresa_1796_IT_PK2.jpg"
 						alt=""
-						class="aspect-square"
+						class="aspect-square w-full"
 					/>
 					<h3>{item.title}</h3>
 					<p>{item.text}</p>

@@ -80,7 +80,7 @@
 				<div transition:fade class="absolute top-18 left-0 h-auto w-full bg-black px-8 py-4 pb-16">
 					<div class="grid grid-cols-2 gap-4 lg:container lg:grid-cols-6">
 						<div>
-							<h2 class="mb-4 text-lg underline">Orígenes</h2>
+							<h2 class="mb-4 text-lg underline px-4 lg:px-0">Orígenes</h2>
 							<ul>
 								{#each states as state}
 									<li>

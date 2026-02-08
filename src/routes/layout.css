@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@theme {
+  --font-anton: 'Anton', sans-serif;
+}
